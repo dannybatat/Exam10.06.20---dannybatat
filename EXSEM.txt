@@ -1,0 +1,132 @@
+1. What is the newer platform for windows forms in .NET ?
+.net framework 4.7.2
+or u ask on wpf?
+
+
+
+2. What is the advantages of winform over other platforms?
+Winform have advantages for other platforms on useing "mono"
+allowing you use your prog on linux but you must use framework 2.0
+
+
+
+3. What are the problems with a single drawing worker?
+if we use single drawing worker we have problem to draw thing with sleep and draw again
+if we do it with one worker we see the finale destination in 1 situation and other situation are UI be stuck
+like the simon game we do on class
+
+
+
+4. How did we solve the problem of a single drawing worker?
+we need add one more worker to help as with the task of the program
+
+
+
+5. How do you create new workers? Give example
+ Task.Run(new Action(NAME OF THE FUNCTION ));
+
+
+
+6. How do we ask the drawing worker to perform a drawing task for us?
+Task.Run(new Action(NAME OF THE FUNCTION ));
+
+
+
+7. Where and how do we print debug messages in winform (since there is no console)
+using System.Diagnostics;
+ Debug.WriteLine("");
+
+
+
+8. What is the difference between Properties and Events?
+Properties =
+They are values related to the object itself such as: size, location, color, name
+Events = 
+Are actually events that happened to objects as a result of the user doing action on them, such as clicking on it, writing on it, placing the mouse, etc.
+
+
+
+9. What’s the difference between listbox and combo box?
+combo box = 
+A list where you can add \ select variables and it appears to be in the scroll list
+
+list box =
+A list where you can add \ select variables and it appears to be on square in the variables we have added \ selectable
+
+
+10. How can we add an open-file-dialog to our project? also demonstrate in code
+we need to add  open file dialog create a button "open file" use event cilck whn we click the button we call to open file dialog
+        private void openImgFileBtn_Click(object sender, EventArgs e)
+        {
+           openFileDialog1.ShowDialog();
+        }
+
+
+
+
+11. How can we add a menu to our project? also demonstrate in code
+we add tool strip to are project in the setting u can add tabes give them a name, the code i show here i add menu have tab "ruls" for game whn u click it u go message box with the ruls of this game
+
+        private void rulseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("On the board shown 5 digits when you click the Start Button the digits disappear you need to guess which numbers were in the correct order, each digit you guessed correctly will give you one point", "Game Rules");
+        }
+
+
+
+12. Create a Message box with a yes , no buttons, and an Error icon
+ MessageBox.Show("title", "text",MessageBoxButtons.YesNo);
+
+
+13. What’s the difference between checkbox and radio button?
+radio button alow to user select option that select checked on button
+
+checkbox its multiple selections  from list of options that checked  on time u select the option and off whn unmark it
+
+
+
+14. What the purpose of the designer.cs file?
+ designer.cs its a place that what we design on are window(form) are creat ther on code 
+so we will find the visual parameters there
+
+
+
+15. Does winform also has static void main ? if so, what is its purpose?
+NO
+
+
+
+16. Why is it important to give names to our components?
+It helps to arrange and organize,
+and if someone else comes to work on our project it will be easier for him to understand what each component is
+
+
+
+17. How do we mark a resource (i.e. photo) to be copied to the runtime folder?
+we go to propeties =>copy to output directory we chosen on " copy always"
+
+18. What is a Timer? When can we use it? also demonstrate in code
+timer its tool help as do action on interval
+
+
+19. How do we make a variable become global to our form?
+we code it here
+    public partial class Form1 : Form
+    {
+      ---------------------------------------- here
+
+20. What is the purpose of const variables? Give an example?
+ const are  variable we dont want to change on function only on preference
+        // prefernece
+        const int MAX_OF_THE_HIGH_NUMBMER = 10;
+only here we can change the hige number we can get on are progejct
+
+
+
+
+
+21. In the Keydown event, how can we detect which key was pressed?
+ this.KeyPreview = true; 
+on mainform
+
+

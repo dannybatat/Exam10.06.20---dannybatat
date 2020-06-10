@@ -1,0 +1,15 @@
+C:\Users\dannyb\Source\Repos\ecsem\ExamFinale\bin\Debug\ExamFinale.exe.config
+C:\Users\dannyb\Source\Repos\ecsem\ExamFinale\bin\Debug\ExamFinale.exe
+C:\Users\dannyb\Source\Repos\ecsem\ExamFinale\bin\Debug\ExamFinale.pdb
+C:\Users\dannyb\Source\Repos\ecsem\ExamFinale\obj\Debug\ExamFinale.csprojAssemblyReference.cache
+C:\Users\dannyb\Source\Repos\ecsem\ExamFinale\obj\Debug\ExamFinale.Properties.Resources.resources
+C:\Users\dannyb\Source\Repos\ecsem\ExamFinale\obj\Debug\ExamFinale.csproj.GenerateResource.cache
+C:\Users\dannyb\Source\Repos\ecsem\ExamFinale\obj\Debug\ExamFinale.csproj.CoreCompileInputs.cache
+C:\Users\dannyb\Source\Repos\ecsem\ExamFinale\obj\Debug\ExamFinale.exe
+C:\Users\dannyb\Source\Repos\ecsem\ExamFinale\obj\Debug\ExamFinale.pdb
+C:\Users\dannyb\Source\Repos\ecsem\ExamFinale\obj\Debug\ExamFinale.ExamForm.resources
+C:\Users\dannyb\Source\Repos\ecsem\ExamFinale\bin\Debug\image\ball.jpg
+C:\Users\dannyb\Source\Repos\ecsem\ExamFinale\bin\Debug\image\key4.jpg
+C:\Users\dannyb\Source\Repos\ecsem\ExamFinale\bin\Debug\image\key3.jpg
+C:\Users\dannyb\Source\Repos\ecsem\ExamFinale\bin\Debug\image\key2.jpg
+C:\Users\dannyb\Source\Repos\ecsem\ExamFinale\bin\Debug\image\key.jpg
