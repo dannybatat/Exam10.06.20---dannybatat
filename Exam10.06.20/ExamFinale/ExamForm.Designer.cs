@@ -187,6 +187,7 @@
             this.Name = "ExamForm";
             this.Text = "ExamWin";
             this.Load += new System.EventHandler(this.ExamForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ExamForm_KeyDown);
             this.BoardPn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ballPbox)).EndInit();
             this.BallGamePn.ResumeLayout(false);

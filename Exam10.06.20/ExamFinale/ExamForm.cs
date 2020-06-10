@@ -126,20 +126,16 @@ namespace ExamFinale
             switch (moving_to)
             {
                 case MOVE_RIGHT:
-                    current_x = current_x + BALL_DISTANCE_JUMP;
-                    ballPbox.Location = new Point(current_x, current_y);
+                    current_x = current_x + BALL_DISTANCE_JUMP;                   
                     break;
                 case MOVE_LEFT:
-                    current_x = current_x - BALL_DISTANCE_JUMP;
-                    ballPbox.Location = new Point(current_x, current_y);
+                    current_x = current_x - BALL_DISTANCE_JUMP;                  
                     break;
                 case MOVE_UP:
-                    current_y = current_y - BALL_DISTANCE_JUMP;
-                    ballPbox.Location = new Point(current_x, current_y);
+                    current_y = current_y - BALL_DISTANCE_JUMP;                
                     break;
                 case MOVE_DOWN:
-                    current_y = current_y + BALL_DISTANCE_JUMP;
-                    ballPbox.Location = new Point(current_x, current_y);
+                    current_y = current_y + BALL_DISTANCE_JUMP;                  
                     break;
             }
             if (current_x < 0 || current_y < 0 || current_y > Board_SIZE_Y - IMAGE_SIZE_Y || current_x > Board_SIZE_X - IMAGE_SIZE_X)
@@ -148,8 +144,10 @@ namespace ExamFinale
 
                 return;
             }
+            ballPbox.Location = new Point(current_x, current_y);
+
         }
-        private void MainWindow_KeyDown(object sender, KeyEventArgs e)
+        private void ExamForm_KeyDown(object sender, KeyEventArgs e)
         {
 
 
@@ -227,5 +225,6 @@ namespace ExamFinale
            current_x = 195;
            current_y = 195;
         }
+
     }
 }
