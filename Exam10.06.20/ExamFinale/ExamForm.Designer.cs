@@ -37,14 +37,12 @@
             this.timerProgress = new System.Windows.Forms.Timer(this.components);
             this.BoardPn = new System.Windows.Forms.Panel();
             this.ballPbox = new System.Windows.Forms.PictureBox();
-            this.leftBt = new System.Windows.Forms.Button();
-            this.rightBt = new System.Windows.Forms.Button();
-            this.downBt = new System.Windows.Forms.Button();
             this.upBt = new System.Windows.Forms.Button();
-            this.BallGamePn = new System.Windows.Forms.Panel();
+            this.downBt = new System.Windows.Forms.Button();
+            this.rightBt = new System.Windows.Forms.Button();
+            this.leftBt = new System.Windows.Forms.Button();
             this.BoardPn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ballPbox)).BeginInit();
-            this.BallGamePn.SuspendLayout();
             this.SuspendLayout();
             // 
             // TextBoxNub
@@ -100,7 +98,7 @@
             // 
             this.BoardPn.BackColor = System.Drawing.Color.White;
             this.BoardPn.Controls.Add(this.ballPbox);
-            this.BoardPn.Location = new System.Drawing.Point(371, 4);
+            this.BoardPn.Location = new System.Drawing.Point(863, 35);
             this.BoardPn.Name = "BoardPn";
             this.BoardPn.Size = new System.Drawing.Size(450, 450);
             this.BoardPn.TabIndex = 5;
@@ -116,71 +114,71 @@
             this.ballPbox.TabIndex = 0;
             this.ballPbox.TabStop = false;
             // 
-            // leftBt
+            // upBt
             // 
-            this.leftBt.BackgroundImage = global::ExamFinale.Properties.Resources.key4;
-            this.leftBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.leftBt.Location = new System.Drawing.Point(103, 369);
-            this.leftBt.Name = "leftBt";
-            this.leftBt.Size = new System.Drawing.Size(70, 70);
-            this.leftBt.TabIndex = 9;
-            this.leftBt.UseVisualStyleBackColor = true;
-            this.leftBt.Click += new System.EventHandler(this.leftBt_Click);
-            // 
-            // rightBt
-            // 
-            this.rightBt.BackgroundImage = global::ExamFinale.Properties.Resources.key3;
-            this.rightBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rightBt.Location = new System.Drawing.Point(262, 369);
-            this.rightBt.Name = "rightBt";
-            this.rightBt.Size = new System.Drawing.Size(70, 70);
-            this.rightBt.TabIndex = 8;
-            this.rightBt.UseVisualStyleBackColor = true;
-            this.rightBt.Click += new System.EventHandler(this.rightBt_Click);
+            this.upBt.BackColor = System.Drawing.SystemColors.Control;
+            this.upBt.BackgroundImage = global::ExamFinale.Properties.Resources.key2;
+            this.upBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.upBt.FlatAppearance.BorderSize = 5;
+            this.upBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.upBt.Location = new System.Drawing.Point(678, 324);
+            this.upBt.Name = "upBt";
+            this.upBt.Size = new System.Drawing.Size(70, 70);
+            this.upBt.TabIndex = 6;
+            this.upBt.UseVisualStyleBackColor = false;
+            this.upBt.Click += new System.EventHandler(this.upBt_Click);
             // 
             // downBt
             // 
             this.downBt.BackgroundImage = global::ExamFinale.Properties.Resources.key;
             this.downBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.downBt.Location = new System.Drawing.Point(186, 369);
+            this.downBt.FlatAppearance.BorderSize = 5;
+            this.downBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.downBt.Location = new System.Drawing.Point(678, 400);
             this.downBt.Name = "downBt";
             this.downBt.Size = new System.Drawing.Size(70, 70);
             this.downBt.TabIndex = 7;
             this.downBt.UseVisualStyleBackColor = true;
             this.downBt.Click += new System.EventHandler(this.downBt_Click);
             // 
-            // upBt
+            // rightBt
             // 
-            this.upBt.BackgroundImage = global::ExamFinale.Properties.Resources.key2;
-            this.upBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.upBt.Location = new System.Drawing.Point(186, 293);
-            this.upBt.Name = "upBt";
-            this.upBt.Size = new System.Drawing.Size(70, 70);
-            this.upBt.TabIndex = 6;
-            this.upBt.UseVisualStyleBackColor = true;
-            this.upBt.Click += new System.EventHandler(this.upBt_Click);
+            this.rightBt.BackgroundImage = global::ExamFinale.Properties.Resources.key3;
+            this.rightBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rightBt.FlatAppearance.BorderSize = 5;
+            this.rightBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rightBt.Location = new System.Drawing.Point(754, 400);
+            this.rightBt.Name = "rightBt";
+            this.rightBt.Size = new System.Drawing.Size(70, 70);
+            this.rightBt.TabIndex = 8;
+            this.rightBt.UseVisualStyleBackColor = true;
+            this.rightBt.Click += new System.EventHandler(this.rightBt_Click);
             // 
-            // BallGamePn
+            // leftBt
             // 
-            this.BallGamePn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BallGamePn.Controls.Add(this.leftBt);
-            this.BallGamePn.Controls.Add(this.rightBt);
-            this.BallGamePn.Controls.Add(this.downBt);
-            this.BallGamePn.Controls.Add(this.upBt);
-            this.BallGamePn.Controls.Add(this.BoardPn);
-            this.BallGamePn.Location = new System.Drawing.Point(427, 8);
-            this.BallGamePn.Name = "BallGamePn";
-            this.BallGamePn.Size = new System.Drawing.Size(894, 486);
-            this.BallGamePn.TabIndex = 10;
+            this.leftBt.BackgroundImage = global::ExamFinale.Properties.Resources.key4;
+            this.leftBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.leftBt.FlatAppearance.BorderSize = 5;
+            this.leftBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.leftBt.Location = new System.Drawing.Point(595, 400);
+            this.leftBt.Name = "leftBt";
+            this.leftBt.Size = new System.Drawing.Size(70, 70);
+            this.leftBt.TabIndex = 9;
+            this.leftBt.UseVisualStyleBackColor = true;
+            this.leftBt.Click += new System.EventHandler(this.leftBt_Click);
             // 
             // ExamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1346, 588);
-            this.Controls.Add(this.BallGamePn);
+            this.Controls.Add(this.leftBt);
+            this.Controls.Add(this.rightBt);
             this.Controls.Add(this.progressBt);
+            this.Controls.Add(this.downBt);
             this.Controls.Add(this.progresLeb);
+            this.Controls.Add(this.upBt);
+            this.Controls.Add(this.BoardPn);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.TextBoxLeb);
             this.Controls.Add(this.TextBoxNub);
@@ -190,7 +188,6 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ExamForm_KeyDown);
             this.BoardPn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ballPbox)).EndInit();
-            this.BallGamePn.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,12 +202,11 @@
         private System.Windows.Forms.Button progressBt;
         private System.Windows.Forms.Timer timerProgress;
         private System.Windows.Forms.Panel BoardPn;
+        private System.Windows.Forms.PictureBox ballPbox;
         private System.Windows.Forms.Button upBt;
         private System.Windows.Forms.Button downBt;
         private System.Windows.Forms.Button rightBt;
         private System.Windows.Forms.Button leftBt;
-        private System.Windows.Forms.PictureBox ballPbox;
-        private System.Windows.Forms.Panel BallGamePn;
     }
 }
 

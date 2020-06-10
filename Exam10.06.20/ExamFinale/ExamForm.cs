@@ -115,36 +115,7 @@ namespace ExamFinale
 
             ballPbox.Location = new Point(current_x, current_y);
             BoardPn.Size = new Size(Board_SIZE_X, Board_SIZE_Y);
-
-
-
-
-
             this.KeyPreview = true;
-
-
-            switch (moving_to)
-            {
-                case MOVE_RIGHT:
-                    current_x = current_x + BALL_DISTANCE_JUMP;                   
-                    break;
-                case MOVE_LEFT:
-                    current_x = current_x - BALL_DISTANCE_JUMP;                  
-                    break;
-                case MOVE_UP:
-                    current_y = current_y - BALL_DISTANCE_JUMP;                
-                    break;
-                case MOVE_DOWN:
-                    current_y = current_y + BALL_DISTANCE_JUMP;                  
-                    break;
-            }
-            if (current_x < 0 || current_y < 0 || current_y > Board_SIZE_Y - IMAGE_SIZE_Y || current_x > Board_SIZE_X - IMAGE_SIZE_X)
-            {
-                GameOver();
-
-                return;
-            }
-            ballPbox.Location = new Point(current_x, current_y);
 
         }
         private void ExamForm_KeyDown(object sender, KeyEventArgs e)
@@ -154,18 +125,29 @@ namespace ExamFinale
             switch (e.KeyCode)
             {
                 case Keys.Left:
-                    moving_to = MOVE_LEFT;
+                    current_x = current_x - BALL_DISTANCE_JUMP;
+                    Task.Run(new Action(LeftKeyBackColorPress));
                     break;
                 case Keys.Right:
-                    moving_to = MOVE_RIGHT;
+                    current_x = current_x + BALL_DISTANCE_JUMP;
+                    Task.Run(new Action(RightKeyBackColorPress));
                     break;
                 case Keys.Up:
-                    moving_to = MOVE_UP;
+                    current_y = current_y - BALL_DISTANCE_JUMP;
+                    Task.Run(new Action(UpKeyBackColorPress));
                     break;
                 case Keys.Down:
-                    moving_to = MOVE_DOWN;
+                    current_y = current_y + BALL_DISTANCE_JUMP;
+                    Task.Run(new Action(DownKeyBackColorPress));
                     break;
-            }          
+            }
+            if (current_x < 0 || current_y < 0 || current_y > Board_SIZE_Y - IMAGE_SIZE_Y || current_x > Board_SIZE_X - IMAGE_SIZE_X)
+            {
+                GameOver();
+
+                return;
+            }
+            ballPbox.Location = new Point(current_x, current_y);
         }
 
         private void upBt_Click(object sender, EventArgs e)
@@ -176,7 +158,7 @@ namespace ExamFinale
             }
             current_y = current_y - BALL_DISTANCE_JUMP;
             ballPbox.Location = new Point(current_x, current_y);
-           
+            Task.Run(new Action(UpKeyBackColorPress));
         }
 
         private void downBt_Click(object sender, EventArgs e)
@@ -189,6 +171,7 @@ namespace ExamFinale
             }
             current_y = current_y + BALL_DISTANCE_JUMP;
             ballPbox.Location = new Point(current_x, current_y);
+            Task.Run(new Action(DownKeyBackColorPress));
             return;
         }
 
@@ -202,6 +185,7 @@ namespace ExamFinale
             }
             current_x = current_x - BALL_DISTANCE_JUMP;
             ballPbox.Location = new Point(current_x, current_y);
+            Task.Run(new Action(LeftKeyBackColorPress));
             return;
         }
 
@@ -215,15 +199,45 @@ namespace ExamFinale
             }
             current_x = current_x + BALL_DISTANCE_JUMP;
             ballPbox.Location = new Point(current_x, current_y);
+            Task.Run(new Action(RightKeyBackColorPress));
             return;
         }
 
         private void GameOver()
         {
-            MessageBox.Show("your ball out of the line :)", "Game Over");
-            ballPbox.Location = new Point(195, 195);
+           MessageBox.Show("your ball out of the line :)", "Game Over");
+           ballPbox.Location = new Point(195, 195);
            current_x = 195;
            current_y = 195;
+        }
+
+        private void UpKeyBackColorPress()
+        {
+            upBt.FlatAppearance.BorderColor = Color.Red;
+            Thread.Sleep(500);
+            upBt.FlatAppearance.BorderColor = Color.Black;
+            Thread.Sleep(500);         
+        }
+        private void DownKeyBackColorPress()
+        {
+            downBt.FlatAppearance.BorderColor = Color.Red;
+            Thread.Sleep(500);
+            downBt.FlatAppearance.BorderColor = Color.Black;
+            Thread.Sleep(500);
+        }
+        private void LeftKeyBackColorPress()
+        {
+            leftBt.FlatAppearance.BorderColor = Color.Red;
+            Thread.Sleep(500);
+            leftBt.FlatAppearance.BorderColor = Color.Black;
+            Thread.Sleep(500);
+        }
+        private void RightKeyBackColorPress()
+        {
+            rightBt.FlatAppearance.BorderColor = Color.Red;
+            Thread.Sleep(500);
+            rightBt.FlatAppearance.BorderColor = Color.Black;
+            Thread.Sleep(500);
         }
 
     }
